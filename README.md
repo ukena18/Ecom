@@ -16,9 +16,9 @@
 
 #### Some Pictures of App
 
-![mainpage](assets/mainpage.png)
-![cart](assets/cart.png)
-![checkout](assets/checkout.png)
-![paypal](assets/paypal.png)
+![mainpage](assest/mainpage.png)
+![cart](assest/cart.png)
+![checkout](assest/checkout.png)
+![paypal](assest/paypal.png)
 
 
