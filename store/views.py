@@ -65,14 +65,14 @@ def updateItem(request):
     action = data["action"]
     # print(productId, action)
 
-    # #get the customer
-    # customer = request.user.customer
-    # # find the product
-    # product = Product.objects.get(id=productId)
-    # # either create or get the order based on which customer it is 
-    # order, created = Order.objects.get_or_create(customer=customer, complete=False)
-    # # either create or get the orderitem  based on which order it is 
-    # orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
+    #get the customer
+    customer = request.user.customer
+    # find the product
+    product = Product.objects.get(id=productId)
+    # either create or get the order based on which customer it is 
+    order, created = Order.objects.get_or_create(customer=customer, complete=False)
+    # either create or get the orderitem  based on which order it is 
+    orderItem, created = OrderItem.objects.get_or_create(order=order, product=product)
 
     # if action is add plus the quantity of order item
     if action == "add":
