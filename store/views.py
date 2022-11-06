@@ -91,7 +91,7 @@ def updateItem(request):
 
 
 # json return api end point
-# for check out order we created and shipping
+for check out order we created and shipping
 def processOrder(request):
     #create unique transaction id
     transaction_id = datetime.datetime.now().timestamp()
