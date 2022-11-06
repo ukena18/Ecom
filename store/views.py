@@ -1,13 +1,13 @@
 
-# from django.shortcuts import render
-# from .models import *
-# # for api view
-# from django.http import JsonResponse
-# import json
-# import datetime
+from django.shortcuts import render
+from .models import *
+# for api view
+from django.http import JsonResponse
+import json
+import datetime
 
-# # dry(don't repeat yourself) functions
-# from .utils import cookieCart, cartData ,guestOrder
+# dry(don't repeat yourself) functions
+from .utils import cookieCart, cartData ,guestOrder
 
 
 
@@ -42,19 +42,19 @@ def cart(request):
     return render(request, "store/cart.html", context)  # Create your views here.
 
 
-def checkout(request):
-    #get the cart data for looeged user or guest use
-    data = cartData(request)
-    #it isshow us how many item we do have in the frontend and keep refresh 
-    # every time we click add button
-    cartItems = data["cartItems"]
-     # get the order from cartData
-    order = data["order"]
-    # get the item from carDAta
-    items = data["items"]
-    #create context for frontend
-    context = {"items": items, "order": order, "cartItems": cartItems}
-    return render(request, "store/checkout.html", context)  # Create your views here.
+# def checkout(request):
+#     #get the cart data for looeged user or guest use
+#     data = cartData(request)
+#     #it isshow us how many item we do have in the frontend and keep refresh 
+#     # every time we click add button
+#     cartItems = data["cartItems"]
+#      # get the order from cartData
+#     order = data["order"]
+#     # get the item from carDAta
+#     items = data["items"]
+#     #create context for frontend
+#     context = {"items": items, "order": order, "cartItems": cartItems}
+#     return render(request, "store/checkout.html", context)  # Create your views here.
 
 # json return api end point
 def updateItem(request):
