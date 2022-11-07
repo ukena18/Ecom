@@ -104,20 +104,20 @@ def processOrder(request):
         # get the current order or create it
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
     # if it is guest customer
-    else:
-        # create customer and order 
-        customer,order = guestOrder(request,data)
-    # get the toal of order from form 
-    total = float(data["form"]['total'])
-    # get the transaction id
-    order.transaction_id = transaction_id
-    # if total and cart_total match then complete order
-    # that prevent malicuos attack from frontend
-    #because you can change total with alittle bit javascript knowledge
-    if total == order.get_cart_total:
-        order.complete = True
-    # save the order
-    order.save()
+    # else:
+    #     # create customer and order 
+    #     customer,order = guestOrder(request,data)
+    # # get the toal of order from form 
+    # total = float(data["form"]['total'])
+    # # get the transaction id
+    # order.transaction_id = transaction_id
+    # # if total and cart_total match then complete order
+    # # that prevent malicuos attack from frontend
+    # #because you can change total with alittle bit javascript knowledge
+    # if total == order.get_cart_total:
+    #     order.complete = True
+    # # save the order
+    # order.save()
     # if there is physical item get the shipping info
     if order.shipping == True:
         ShippingAddress.objects.create(
