@@ -10,7 +10,6 @@ import datetime
 from .utils import cookieCart, cartData ,guestOrder
 
 
-
 #main page where you can see all product
 def store(request):
     #get the cart data for looeged user or guest user
