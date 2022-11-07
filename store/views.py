@@ -123,11 +123,11 @@ def processOrder(request):
         ShippingAddress.objects.create(
             customer=customer,
             order=order,
-    #         address=data["shipping"]["address"],
-    #         city=data["shipping"]["city"],
-    #         state=data["shipping"]["state"],
-    #         zipcode=data["shipping"]["zipcode"],
+            address=data["shipping"]["address"],
+            city=data["shipping"]["city"],
+            state=data["shipping"]["state"],
+            zipcode=data["shipping"]["zipcode"],
 
-    #     )
-    #  # retun confirmation( you didnt console anywhere)
-    # return JsonResponse("PAyment Comlete", safe=False)
+        )
+     # retun confirmation( you didnt console anywhere)
+    return JsonResponse("PAyment Comlete", safe=False)
