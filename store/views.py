@@ -23,22 +23,22 @@ def store(request):
     #create context for frontend
     context = {"products": products, "cartItems": cartItems}
     #return to front end
-    return render(request, "store/store.html", context)  # Create your views here.
+#     return render(request, "store/store.html", context)  # Create your views here.
 
 
-def cart(request):
-    #get the cart data for looeged user or guest use
-    data = cartData(request)
-    #it isshow us how many item we do have in the frontend and keep refresh 
-    # every time we click add button
-    cartItems = data["cartItems"]
-     # get the order from cartData
-    order = data["order"]
-    # get the item from carDAta
-    items = data["items"]
-    #create context for frontend
-    context = {"items": items, "order": order, "cartItems": cartItems}
-    return render(request, "store/cart.html", context)  # Create your views here.
+# def cart(request):
+#     #get the cart data for looeged user or guest use
+#     data = cartData(request)
+#     #it isshow us how many item we do have in the frontend and keep refresh 
+#     # every time we click add button
+#     cartItems = data["cartItems"]
+#      # get the order from cartData
+#     order = data["order"]
+#     # get the item from carDAta
+#     items = data["items"]
+#     #create context for frontend
+#     context = {"items": items, "order": order, "cartItems": cartItems}
+#     return render(request, "store/cart.html", context)  # Create your views here.
 
 
 def checkout(request):
