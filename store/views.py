@@ -10,20 +10,20 @@ import datetime
 from .utils import cookieCart, cartData ,guestOrder
 
 
-#main page where you can see all product
-def store(request):
-    #get the cart data for looeged user or guest user
-    data = cartData(request)
-    #it isshow us how many item we do have in the frontend and keep refresh 
-    # every time we click add button
-    cartItems = data["cartItems"]
+# #main page where you can see all product
+# def store(request):
+#     #get the cart data for looeged user or guest user
+#     data = cartData(request)
+#     #it isshow us how many item we do have in the frontend and keep refresh 
+#     # every time we click add button
+#     cartItems = data["cartItems"]
 
-    #get all the produt
-    products = Product.objects.all()
-    #create context for frontend
-    context = {"products": products, "cartItems": cartItems}
-    #return to front end
-#     return render(request, "store/store.html", context)  # Create your views here.
+#     #get all the produt
+#     products = Product.objects.all()
+#     #create context for frontend
+#     context = {"products": products, "cartItems": cartItems}
+#     #return to front end
+# #     return render(request, "store/store.html", context)  # Create your views here.
 
 
 def cart(request):
