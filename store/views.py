@@ -26,13 +26,13 @@ def store(request):
 #     return render(request, "store/store.html", context)  # Create your views here.
 
 
-# def cart(request):
-#     #get the cart data for looeged user or guest use
-#     data = cartData(request)
-#     #it isshow us how many item we do have in the frontend and keep refresh 
-#     # every time we click add button
-#     cartItems = data["cartItems"]
-     # get the order from cartData
+def cart(request):
+    #get the cart data for looeged user or guest use
+    data = cartData(request)
+    #it isshow us how many item we do have in the frontend and keep refresh 
+    # every time we click add button
+    cartItems = data["cartItems"]
+     get the order from cartData
     order = data["order"]
     # get the item from carDAta
     items = data["items"]
