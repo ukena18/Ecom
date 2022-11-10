@@ -13,10 +13,10 @@ from .utils import cookieCart, cartData ,guestOrder
 # #main page where you can see all product
 # def store(request):
 #     #get the cart data for looeged user or guest user
-#     data = cartData(request)
-#     #it isshow us how many item we do have in the frontend and keep refresh 
-#     # every time we click add button
-#     cartItems = data["cartItems"]
+    data = cartData(request)
+    #it isshow us how many item we do have in the frontend and keep refresh 
+    # every time we click add button
+    cartItems = data["cartItems"]
 
     #get all the produt
     products = Product.objects.all()
