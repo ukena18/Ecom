@@ -2,12 +2,12 @@
 from django.shortcuts import render
 from .models import *
 # for api view
-from django.http import JsonResponse
-import json
-import datetime
+# from django.http import JsonResponse
+# import json
+# import datetime
 
-# dry(don't repeat yourself) functions
-from .utils import cookieCart, cartData ,guestOrder
+# # dry(don't repeat yourself) functions
+# from .utils import cookieCart, cartData ,guestOrder
 
 
 #main page where you can see all product
