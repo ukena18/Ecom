@@ -5,7 +5,7 @@
   <div class="col-md-6 offset-md-3">
     <h3>Create article</h3>
     <hr />
-    <form method="post" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
       {% csrf_token %} {{ form.media }} {{ form|crispy }}
 
       <input accept="image/*" type="file" id="imgInp" />
