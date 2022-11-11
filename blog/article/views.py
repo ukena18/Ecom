@@ -49,7 +49,7 @@ def addarticle(request):
     form = ArticleForm(request.POST or None, request.FILES or None)
     if request.method == "POST":
         print("Nathan ",request.POST)
-        print("Himme",request.FILES)
+        # print("Himme",request.)
     if form.is_valid():
 
         article = form.save(commit=False)
