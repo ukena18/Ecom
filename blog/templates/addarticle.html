@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block body %} {% load crispy_forms_tags %}
+
+<br />
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h3>Create article</h3>
+    <hr />
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %} {{ form.media }} {{ form|crispy }}
+
+      <input accept="image/*" type="file" id="imgInp" />
+
+      <img id="blah" src="#" width="200" height="200" alt="your image" />
+      <button type="submit" class="btn btn-primary float-right">Save</button>
+    </form>
+  </div>
+</div>
+<hr class="col-md-6 offset-md-3" />
+
+<script>
+  imgInp.onchange = (evt) => {
+    const [file] = imgInp.files;
+    if (file) {
+      blah.src = URL.createObjectURL(file);
+    }
+  };
+</script>
+
+{% endblock body %}

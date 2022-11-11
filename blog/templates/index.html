@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <br>
+    <div class='jumbotron text-center' >
+        <h4>This site was creating for educatioun purposes</h4>
+        <p>This is my first Django apllication. Hope you ganna like this !</p>
+    </div>
+
+    <table class="table table-dark">
+  <thead>
+    <tr>
+        {% for heads in Programing_Languge %}
+        <th scope="col">{{ heads}}</th>
+        {% endfor %}
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for python  in frameworks %}
+        <tr>
+            <td> {{python}} </td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+    {% if request.user.is_authenticated %}
+        <p>Logged {{ request.user.username}}</p>
+    {% else %}
+    <p>Not logged</p>
+    {% endif %}
+{% endblock body %}

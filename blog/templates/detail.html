@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="row">
+  <div class="col-lg-8">
+    <!-- Post content-->
+    <article>
+      <!-- Post header-->
+      <header class="mb-4">
+        <!-- Post title-->
+        <h3 class="fw-bolder mb-1">{{ myarticle.title }}</h3>
+        <h6>Author: {{ myarticle.author }}</h6>
+        <!-- Post meta content-->
+        <div class="text-muted fst-italic mb-2">
+          Created Date: {{ myarticle.created_date }}
+        </div>
+        <!-- Post categories-->
+      </header>
+      <!-- Preview image figure-->
+      <figure class="mb-4">
+        <img
+          class="img-fluid rounded"
+          src="{{ myarticle.article_image.url}}"
+          alt="..."
+        />
+      </figure>
+      <!-- Post content-->
+      <section class="mb-5">
+        <p class="fs-5 mb-4">{{myarticle.content}}</p>
+      </section>
+    </article>
+  </div>
+</div>
+
+{% endblock body %}
