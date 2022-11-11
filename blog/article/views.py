@@ -27,7 +27,7 @@ def about(request):
     return render(request,'about.html')
 
 def articles(request):
-    articles = Article.objects.all();
+    articles = Article.objects.all() 
 
     return render(request,'articles.html',{'articles':articles})
 
