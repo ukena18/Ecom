@@ -48,7 +48,7 @@ def dashbord(request):
 def addarticle(request):
     form = ArticleForm(request.POST or None, request.FILES or None)
     if request.method == "POST":
-        print(request.POST)
+        # print(request.POST)
         print("Himme",request.FILES)
     if form.is_valid():
 
