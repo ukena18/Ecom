@@ -37,11 +37,11 @@ def articles(request):
 def dashbord(request):
     articles = Article.objects.filter(author=request.user);
     context = {
-    #     "articles":articles
-    # }
-    # for i in articles:
-    #     print(i,'----')
-    # return render(request,"dashbord.html",context)
+        "articles":articles
+    }
+    for i in articles:
+        print(i,'----')
+    return render(request,"dashbord.html",context)
 
 
 @login_required(login_url='user:loginUser')
