@@ -6,7 +6,7 @@
 <a href="/articles/addarticle" class="btn btn-danger"> Add article </a>
 <br />
 <br />
-{% comment %} {% if articles %}
+{% if articles %}
 <table class="table">
   <thead>
     <tr>
@@ -19,7 +19,7 @@
     </tr>
   </thead>
   <tbody>
-    {% endcomment %} {% for article in articles %}
+    {% for article in articles %}
     <tr>
       <th scope="row">{{ article.id }}</th>
       <td>
