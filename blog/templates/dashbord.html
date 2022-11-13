@@ -1,14 +1,12 @@
-{% extends "layout.html" %}
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 <h1>Control panel</h1>
-<hr>
-<h3>Well come {{ request.user.username }} </h3>
-<hr>
-<a href='/articles/addarticle' class ='btn btn-danger'> Add article </a>
-<br>
-<br>
-
-{% if articles %}
+<hr />
+<h3>Well come {{ request.user.username }}</h3>
+<hr />
+<a href="/articles/addarticle" class="btn btn-danger"> Add article </a>
+<br />
+<br />
+{% comment %} {% if articles %}
 <table class="table">
   <thead>
     <tr>
@@ -21,24 +19,28 @@
     </tr>
   </thead>
   <tbody>
-  {% for article in articles  %}
+    {% endcomment %} {% for article in articles %}
     <tr>
       <th scope="row">{{ article.id }}</th>
-      <td> <a href='/articles/article/{{ article.id }}'>{{ article.title }} </a> </td>
+      <td>
+        <a href="/articles/article/{{ article.id }}">{{ article.title }} </a>
+      </td>
       <td>{{ article.author}}</td>
-      <td>{{ article.created_date }}</td>  
-      <td> <a href='/articles/update/{{ article.id }}' class ='btn btn-success'> Update</a> </td>
-      <td> <a href='/articles/delete/{{ article.id }}' class ='btn btn-danger'> Delete</a> </td>
+      <td>{{ article.created_date }}</td>
+      <td>
+        <a href="/articles/update/{{ article.id }}" class="btn btn-success">
+          Update</a
+        >
+      </td>
+      <td>
+        <a href="/articles/delete/{{ article.id }}" class="btn btn-danger">
+          Delete</a
+        >
+      </td>
     </tr>
-  {% endfor %}
-    
+    {% endfor %}
   </tbody>
 </table>
 {% else %}
-    <div  class='alert alert-danger'>
-            You have not any article
-    </div>
-{% endif %}
-
-
-{% endblock body %}
+<div class="alert alert-danger">You have not any article</div>
+{% endif %} {% endblock body %}
