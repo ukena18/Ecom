@@ -99,6 +99,4 @@ def deleteArticle(request,id):
 
 @login_required(login_url='user:loginUser')
 def updateArticle(request,id):
-    article = get_object_or_404(Article,id=id)
-    form = ArticleForm(request.POST or None, request.FILES or None , instance= article)
-    if form.is_\ve(commit=False);
+    article \
