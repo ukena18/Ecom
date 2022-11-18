@@ -101,5 +101,4 @@ def deleteArticle(request,id):
 def updateArticle(request,id):
     article = get_object_or_404(Article,id=id)
     form = ArticleForm(request.POST or None, request.FILES or None , instance= article)
-    if form.is_valid():
-        article = form.save(commit=False);
+    if form.is_\ve(commit=False);
