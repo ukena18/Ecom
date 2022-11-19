@@ -98,4 +98,5 @@ def deleteArticle(request,id):
 
 
 
-@login_required(login_url=' user:loginUser')
+@login_required(login_url=' user:loginUser')vsdavv
+
