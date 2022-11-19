@@ -100,9 +100,4 @@ def deleteArticle(request,id):
 
 @login_required(login_url='user:loginUser')
 def deleteArticle(request,id):
-    article = get_object_or_404(Article,id=id)
-    article.delete()
-    messages.succ 
-
-
-
+    article = g
