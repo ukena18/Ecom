@@ -94,8 +94,3 @@ def deleteArticle(request,id):
     return redirect('article:dashbord')
 
 
-
-
-
-
-@login_required(login_
