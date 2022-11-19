@@ -98,5 +98,4 @@ def deleteArticle(request,id):
 
 
 
-@login_required(login_url='user:loginUser')
-def delete 
+@login_required(login_url=' 
