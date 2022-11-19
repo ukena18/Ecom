@@ -102,8 +102,7 @@ def deleteArticle(request,id):
 def deleteArticle(request,id):
     article = get_object_or_404(Article,id=id)
     article.delete()
-    messages.success(reque 
-
+    messages.succ 
 
 
 
