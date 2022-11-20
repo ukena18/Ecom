@@ -95,7 +95,3 @@ def deleteArticle(request,id):
 
 
 
-      article.save()
-
-        messages.success(request,'Article updatet');
-        return r
