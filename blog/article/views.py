@@ -98,13 +98,4 @@ def deleteArticle(request,id):
       article.save()
 
         messages.success(request,'Article updatet');
-        return redirect('index')
-    return render(request,'update.html',{'form':form})
-
-@login_required(login_url='user:loginUser')
-def deleteArticle(request,id):
-    article = get_object_or_404(Article,id=id)
-    article.delete()
-    messages.success(request,'Article deleted')
-    return redirect
-       
+        return r
