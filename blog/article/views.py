@@ -94,3 +94,28 @@ def deleteArticle(request,id):
     return redirect('article:dashbord')
 
 
+
+      article.save()
+
+        messages.success(request,'Article updatet');
+        return redirect('index')
+    return render(request,'update.html',{'form':form})
+
+@login_required(login_url='user:loginUser')
+def deleteArticle(request,id):
+    article = get_object_or_404(Article,id=id)
+    article.delete()
+    messages.success(request,'Article deleted')
+    return redirect
+          article.save()
+
+        messages.success(request,'Article updatet');
+        return redirect('index')
+    return render(request,'update.html',{'form':form})
+
+@login_required(login_url='user:loginUser')
+def deleteArticle(request,id):
+    article = get_object_or_404(Article,id=id)
+    article.delete()
+    messages.success(request,'Article deleted')
+    return redirect
