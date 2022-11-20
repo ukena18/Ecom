@@ -107,8 +107,4 @@ def deleteArticle(request,id):
     article.delete()
     messages.success(request,'Article deleted')
     return redirect
-          article.save()
-
-        messages.success(request,'Article updatet');
-        return redirect('index')
-    return render(request,'update.html',{'form':form})
+       
