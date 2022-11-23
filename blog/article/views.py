@@ -92,4 +92,3 @@ def deleteArticle(request,id):
     article.delete()
     messages.success(request,'Article deleted')
     return redirect('article:dashbord')
-ddd
