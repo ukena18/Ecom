@@ -15,6 +15,7 @@
 - run `pip install -r requirements.txt `
 
 #### Some Pictures of App
+ff
 
 ![mainpage](assest/mainpage.png)
 ![cart](assest/cart.png)
