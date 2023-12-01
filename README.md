@@ -6,6 +6,9 @@
 
 ### Using Django for Ecommerce
 
+
+
+            
 ** in order to run code **
 - install python 10.0.0 or higher
 - create virtual enviroment (optinal)
